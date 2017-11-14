@@ -4,6 +4,13 @@ services:
         class:      Q\ExampleBundle\Service\Serializer
         arguments:  ["@jms_serializer.serializer"]
 
+
+    q_example.exception_listener:
+        class:      Q\ExampleBundle\EventListener\ExceptionListener
+        arguments: ['%kernel.debug%']
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+
     # --- REPOSITORIES ---
     q_example.book.repository:
         class:     Q\ExampleBundle\Repository\BookRepository

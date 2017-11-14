@@ -42,6 +42,6 @@ class VerboseException extends \Exception implements VerboseExceptionInterface
      */
     public static function create($message = '', array $extraData = []) : VerboseExceptionInterface
     {
-        return new static($message, 0, null, $extraData);
+        return new self($message, 0, null, $extraData);
     }
 }
