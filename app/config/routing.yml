@@ -1,0 +1,4 @@
+example:
+    resource: '@QExampleBundle/Controller/'
+    type: annotation
+    prefix: /api

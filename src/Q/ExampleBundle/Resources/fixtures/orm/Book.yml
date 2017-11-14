@@ -1,0 +1,17 @@
+# Alice Bundle functions syntax: <functionName()>
+Q\ExampleBundle\Entity\Book:
+    book{1..200}:
+        # author filed has value of Author.php
+        # reference syntax: @fixtureName
+        # wildcard syntax: *
+        author : '@author*'
+        title: <sentence()>
+        release_date: <dateTime()>
+        # passing argument to function
+        # (for passing array as arg see Author.yml)
+        updated_at: <dateTimeThisMonth('now')>
+        description: <paragraph(10)>
+        isbn: <isbn10()>
+        # calling function from custom BookProvider
+        format: <bookFormat()>
+        number_of_pages: <numberBetween(10,1000)>

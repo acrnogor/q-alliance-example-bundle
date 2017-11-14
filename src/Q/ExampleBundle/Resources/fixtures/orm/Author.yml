@@ -1,0 +1,20 @@
+# definition of parameters that can be
+# used through this file
+parameters:
+    genders: ['Male','Female']
+
+Q\ExampleBundle\Entity\Author:
+    # fixture name by which it can be referenced
+    # in other fixtures files
+    # range syntax: {a..b} 
+    author{1..50}:
+        # first_name field has unique value (constraint)
+        first_name : <firstName()>
+        last_name: <lastName()>
+        birthday: <dateTime()>
+        # optional field biography, will be filled 80% of time
+        biography: 80%? <text(100)>
+        # calling function by passing array of values as param
+        gender: <randomElement(<{genders}>)>
+        place_of_birth: <city()>
+

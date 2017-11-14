@@ -1,0 +1,25 @@
+services:
+
+    q_example.serializer:
+        class:      Q\ExampleBundle\Service\Serializer
+        arguments:  ["@jms_serializer.serializer"]
+
+    # --- REPOSITORIES ---
+    q_example.book.repository:
+        class:     Q\ExampleBundle\Repository\BookRepository
+        factory:   ["@doctrine.orm.entity_manager", getRepository]
+        arguments: [Q\ExampleBundle\Entity\Book]
+
+    q_example.author.repository:
+        class:     Q\ExampleBundle\Repository\AuthorRepository
+        factory:   ["@doctrine.orm.entity_manager", getRepository]
+        arguments: [Q\ExampleBundle\Entity\Author]
+
+    # --- FACTORIES ---
+    q_example.book.factory:
+        class: Q\ExampleBundle\Factory\BookFactory
+        arguments: ["@jms_serializer", "@validator"]
+
+    q_example.author.factory:
+        class: Q\ExampleBundle\Factory\AuthorFactory
+        arguments: ["@jms_serializer", "@validator"]
