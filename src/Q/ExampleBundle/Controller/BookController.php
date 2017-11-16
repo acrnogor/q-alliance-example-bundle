@@ -87,7 +87,12 @@ class BookController extends BaseController
      *         response="422",
      *         description="Validation error",
      *         @SWG\Schema(ref="#/definitions/Validation-error")
-     *     )
+     *     ),
+     *     @SWG\Response(
+     *         response="404",
+     *         description="Not found",
+     *         @SWG\Schema(ref="#/definitions/Not-Found-error")
+     *     ),
      * )
      *
      * @Route("/books/{id}", requirements={"id" = "\d+"})
@@ -162,7 +167,8 @@ class BookController extends BaseController
      *     ),
      *     @SWG\Response(
      *         response="404",
-     *         description="Not found"
+     *         description="Not found",
+     *         @SWG\Schema(ref="#/definitions/Not-Found-error")
      *     ),
      * )
      *
@@ -203,7 +209,8 @@ class BookController extends BaseController
      *     ),
      *     @SWG\Response(
      *         response="404",
-     *         description="Not found"
+     *         description="Not found",
+     *         @SWG\Schema(ref="#/definitions/Not-Found-error")
      *     ),
      * )
      *

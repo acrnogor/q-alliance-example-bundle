@@ -83,7 +83,12 @@ class AuthorController extends BaseController
      *         response="422",
      *         description="Validation error",
      *         @SWG\Schema(ref="#/definitions/Validation-error")
-     *     )
+     *     ),
+     *     @SWG\Response(
+     *         response="404",
+     *         description="Not found",
+     *         @SWG\Schema(ref="#/definitions/Not-Found-error")
+     *     ),
      * )
      *
      * @Route("/authors/{id}", requirements={"id" = "\d+"})
@@ -158,7 +163,8 @@ class AuthorController extends BaseController
      *     ),
      *     @SWG\Response(
      *         response="404",
-     *         description="Not found"
+     *         description="Not found",
+     *         @SWG\Schema(ref="#/definitions/Not-Found-error")
      *     ),
      * )
      *
@@ -199,7 +205,8 @@ class AuthorController extends BaseController
      *     ),
      *     @SWG\Response(
      *         response="404",
-     *         description="Not found"
+     *         description="Not found",
+     *         @SWG\Schema(ref="#/definitions/Not-Found-error")
      *     ),
      * )
      *
