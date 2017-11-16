@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Q API Skeleton</title>
+    <meta name="description" content="Q API Skeleto">
+    <meta name="author" content="Q Alliance">
+
+    <link rel="stylesheet" href="css/default.css?v=1.0">
+
+    <style>
+        body {font-weight:normal; font-size:24px; line-height:32px; font-family:Arial, Helvetica, sans-serif;}
+
+        .centered {
+            position: fixed;
+            top: 50%;
+            background-color: #F8F8F8;
+            padding: 2.5%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+<!-- <script src="js/scripts.js"></script> -->
+
+<div class="centered">
+    <h1> Q API Skeleton </h1>
+    {% if app.environment == 'dev' or app.environment == 'test' %}
+    <p>
+        Did you mean to visit <a href="/docs">documentation</a>?
+    </p>
+    {% endif %}
+</div>
+
+</body>
+</html>
+
+
+
+

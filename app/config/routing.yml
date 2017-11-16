@@ -1,3 +1,7 @@
+blog_home:
+    path:     /
+    defaults: { _controller: QExampleBundle:Default:index }
+
 example:
     resource: '@QExampleBundle/Controller/'
     type: annotation

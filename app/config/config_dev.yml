@@ -33,7 +33,7 @@ monolog:
 swagger:
     version: '2.0'
     info:
-        title: 'Q Alliance ExampleBundle with Swagger API documentation'
+        title: 'Q Alliance ExampleBundle'
         version: '1.0.0'
         description: 'Maximum Fluffer.'
     pretty_json: true
