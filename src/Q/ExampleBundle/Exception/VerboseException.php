@@ -2,6 +2,7 @@
 
 namespace Q\ExampleBundle\Exception;
 
+use Symfony\Component\HttpFoundation\Response;
 use Throwable;
 
 class VerboseException extends \Exception implements VerboseExceptionInterface
@@ -42,6 +43,6 @@ class VerboseException extends \Exception implements VerboseExceptionInterface
      */
     public static function create($message = '', array $extraData = []) : VerboseExceptionInterface
     {
-        return new self($message, 0, null, $extraData);
+        return new self($message, Response::HTTP_UNPROCESSABLE_ENTITY, null, $extraData);
     }
 }
