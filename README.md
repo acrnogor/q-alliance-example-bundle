@@ -14,3 +14,12 @@ Contains:
 This is just a demo app made for ZGPHP user group to go with my "Documenting API with Swagger" presentation.
 
 
+### Installation
+
+```
+$ git clone git@github.com:acrnogor/q-alliance-example-bundle.git example
+$ composer install
+$ bin/console doctrine:create:database
+$ bin/console doctrine:schema:update --force
+$ bin/console server:run
+```
